@@ -1,13 +1,18 @@
-import React, { useEffect,useState } from "react";
-import DiceGame from './components/DiceGame'
-import DiceScores from './components/DiceScore'
+import React from "react";
+import Header from './components/Header'
+import Balance from './components/Balance'
+import IncomeExpenses from './components/IncomeExpenses'
+import TransationList from './components/TransactionList'
+import Addtransaction from './components/Addtransaction'
 import "./App.css";
 
 function App() {
-  
-  
   return <div className="App">
-   <DiceGame/>
+  <Header></Header>
+  <Balance  ></Balance>
+  <IncomeExpenses></IncomeExpenses>
+  <TransationList></TransationList>
+  <Addtransaction></Addtransaction>
   </div>;
 }
 
