@@ -8,11 +8,7 @@ const mapDispatchToProps = (dispatch)=>{
     return {
         handlesubmit : (text, amount)=> {
           dispatch(addTransaction({text,amount,id:Math.random()}))
-          if(amount >= 0){
-            dispatch(addIncome(amount))
-          }else{
-            dispatch(addExpenses(amount))
-          }
+     
           dispatch(updateBalance())
         }
     }
@@ -30,7 +26,7 @@ const Addtransation = (props) => {
     <div>
       <h4>Add Transation</h4>
       <form action="#" onSubmit={()=>{
-          props.handlesubmit(text,amount)
+          props.handlesubmit(text,parseInt(amount,10))
           setAmount('')
           setText('')
       }}>
@@ -53,7 +49,7 @@ const Addtransation = (props) => {
           placeholder="Enter Amount...."
           onChange={(e) => 
             
-            setAmount(parseInt(e.target.value,10))}
+            setAmount(e.target.value)}
           required
         />
         <button type="submit">Add Transaction</button>

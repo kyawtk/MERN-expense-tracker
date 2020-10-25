@@ -1,13 +1,13 @@
 import React from "react";
 import { connect } from "react-redux";
-import {deleteTransaction} from '../redux/actions'
+import {updateBalance} from '../redux/actions'
 const mapStateToProps = (state) => {
     return { transactions: state.transactions,}
  
 };
 const mapDispatchToProps =(dispatch)=>{
   return {
-    handleDelete :(id)=> dispatch(deleteTransaction(id))
+    handleDelete :(id)=> dispatch(updateBalance(id))
   }
 }
 
