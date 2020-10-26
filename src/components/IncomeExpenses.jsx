@@ -9,14 +9,14 @@ const mapStateToProps =(state)=>{
     }
 }
 const IncomeExpenses = (props) => {
-    return ( <div className="in-exp-container">
+    return ( <div className="inc-exp-container">
         <div className="income">
             <h4>Income</h4>
-<p>+{props.income}$</p>
+<p className='money plus'>+{props.income}$</p>
         </div>
         <div className="expense">
             <h4>Expense</h4>
-<p>{props.expenses}$</p>
+<p className='money minus'>{props.expenses}$</p>
         </div>
     </div> );
 }

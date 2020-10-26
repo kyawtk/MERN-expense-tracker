@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { addExpenses, addIncome, addTransaction, updateBalance } from "../redux/actions";
+import { addTransaction, updateBalance } from "../redux/actions";
 import {connect} from 'react-redux'
 
 
@@ -52,7 +52,7 @@ const Addtransation = (props) => {
             setAmount(e.target.value)}
           required
         />
-        <button type="submit">Add Transaction</button>
+        <button type="submit" className='btn'>Add Transaction</button>
       </form>
     </div>
   );

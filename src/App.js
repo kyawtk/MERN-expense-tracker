@@ -8,8 +8,10 @@ import "./App.css";
 
 function App() {
   return <div className="App">
+    
   <Header></Header>
-  <Balance  ></Balance>
+  <div className='container'></div>
+  <Balance></Balance>
   <IncomeExpenses></IncomeExpenses>
   <TransationList></TransationList>
   <Addtransaction></Addtransaction>
