@@ -40,7 +40,7 @@ const Addtransation = (props) => {
           required
         />
      
-        <label htmlFor="amount">Amount</label>
+        <label htmlFor="amount">Amount <p>Negative - Expense , Positive - Income</p></label>
         <input
           type="number"
          
