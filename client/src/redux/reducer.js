@@ -9,8 +9,17 @@ export const initialState = {
 
 export function reducer(state = initialState, action) {
   switch (action.type) {
+<<<<<<< HEAD
     
    
+=======
+
+   case actions.GETTRANSACTIONS:{
+     return{
+       ...state,transactions:action.payload
+     }
+   }
+>>>>>>> working
 
 
 
@@ -18,7 +27,8 @@ export function reducer(state = initialState, action) {
 
 
 
-    case actions.UPDATEBALANCE:
+    case actions.UPDATECLIENTBALANCE:
+      
       let newBalance = 0;
       let newArr = state.transactions.filter(
         (transaction) => transaction._id !== action.payload
@@ -50,7 +60,7 @@ export function reducer(state = initialState, action) {
         income,
       };
 
-    case actions.ADDTRANSACTION:
+    case actions.ADDCLIENTTRANSACTION:
       
       return {
         ...state,
