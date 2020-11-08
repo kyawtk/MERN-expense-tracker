@@ -14,10 +14,10 @@ const mapDispatchToProps =(dispatch)=>{
 const TransactionList = (props) => {
   const transactionList = props.transactions.map((transaction) => {
     return (
-      <li key={transaction.id} className={transaction.amount > 0 ? "plus":"minus"}>
+      <li key={transaction._id} className={transaction.amount > 0 ? "plus":"minus"}>
         {transaction.text} <span>{transaction.amount}</span>
         <button className="delete-btn" onClick={()=>{
-          props.handleDelete(transaction.id)
+          props.handleDelete(transaction._id)
         }}>X</button>
       </li>
     );

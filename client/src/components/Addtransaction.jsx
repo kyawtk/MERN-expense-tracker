@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 const mapDispatchToProps = (dispatch)=>{
     return {
         handlesubmit : (text, amount)=> {
-          dispatch(addTransaction({text,amount,id:Math.random()}))
+          dispatch(addTransaction({text,amount}))
      
           dispatch(updateBalance())
         }

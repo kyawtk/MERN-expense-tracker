@@ -9,7 +9,7 @@ export const initialState = {
 
 export function reducer(state = initialState, action) {
   switch (action.type) {
-
+    
    
 
 
@@ -21,7 +21,7 @@ export function reducer(state = initialState, action) {
     case actions.UPDATEBALANCE:
       let newBalance = 0;
       let newArr = state.transactions.filter(
-        (transaction) => transaction.id !== action.payload
+        (transaction) => transaction._id !== action.payload
       );
 
       for (let i = 0; i < newArr.length; i++) {
