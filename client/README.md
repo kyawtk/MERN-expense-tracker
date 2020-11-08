@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Simple Expense tracker app with redux (without backend)
+## Simple Expense tracker app with redux (with MERN)
 
 ## Available Scripts
 
