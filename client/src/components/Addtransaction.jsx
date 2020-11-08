@@ -1,35 +1,30 @@
 import React, { useState } from "react";
 import { addTransaction, updateBalance } from "../redux/actions";
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
 
-
-
-const mapDispatchToProps = (dispatch)=>{
-    return {
-        handlesubmit : (text, amount)=> {
-          dispatch(addTransaction({text,amount,id:Math.random()}))
-     
-          dispatch(updateBalance())
-        }
-    }
-}
-
-
+const mapDispatchToProps = (dispatch) => {
+  return {
+    handlesubmit: (text, amount) => {
+      dispatch(addTransaction({ text, amount }));
+    },
+  };
+};
 
 const Addtransation = (props) => {
   let [text, setText] = useState("");
-  let [amount, setAmount] = useState('');
-
-
+  let [amount, setAmount] = useState("");
 
   return (
     <div>
       <h4>Add Transation</h4>
-      <form action="#" onSubmit={()=>{
-          props.handlesubmit(text,parseInt(amount,10))
-          setAmount('')
-          setText('')
-      }}>
+      <form
+        action="#"
+        onSubmit={() => {
+          props.handlesubmit(text, parseInt(amount, 10));
+          setAmount("");
+          setText("");
+        }}
+      >
         <label htmlFor="text">Text</label>
         <input
           type="text"
@@ -39,23 +34,24 @@ const Addtransation = (props) => {
           onChange={(e) => setText(e.target.value)}
           required
         />
-     
-        <label htmlFor="amount">Amount <p>Negative - Expense , Positive - Income</p></label>
+
+        <label htmlFor="amount">
+          Amount <p>Negative - Expense , Positive - Income</p>
+        </label>
         <input
           type="number"
-         
           id="amount"
           value={amount}
           placeholder="Enter Amount...."
-          onChange={(e) => 
-            
-            setAmount(e.target.value)}
+          onChange={(e) => setAmount(e.target.value)}
           required
         />
-        <button type="submit" className='btn'>Add Transaction</button>
+        <button type="submit" className="btn">
+          Add Transaction
+        </button>
       </form>
     </div>
   );
 };
 
-export default connect(null,mapDispatchToProps)(Addtransation);
+export default connect(null, mapDispatchToProps)(Addtransation);
